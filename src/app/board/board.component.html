@@ -1,0 +1,25 @@
+<div class="centered">
+    <label class="turnLabel" [ngClass]="turn"> {{turn}} turn </label>
+
+
+    <table class="game">
+        <tr *ngFor="let row of board; let i = index">
+            <td *ngFor="let col of board; let j = index" [ngClass]="board[i][j].playable ? 'playable': ''">
+                <div *ngIf="board[i][j].possibleMove" ngClass="possibleMove" (click)="move(i, j)">
+                </div>
+                <!-- init playable squares -->
+                <!-- if the square have a checker on it, display it accordingly-->
+                <div *ngIf="board[i][j].haveChecker"
+                    [class]="(board[i][j].checker.ownedBy == 'Red') ? 'checkerA' : 'checkerB'"
+                    [ngClass]="(board[i][j].checker.ownedBy == turn) ? 'active' : ''"
+                    (click)="showMoveOptions(board[i][j].checker, i, j)">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="button" (click)="undo()"> UNDO </div>
+
+    <div class="button" (click)="redo()"> REDO </div>
+
+</div>

@@ -1,0 +1,88 @@
+td {
+    background-color: rgb(231, 231, 231);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.playable {
+    background-color: rgb(97, 138, 252);
+}
+
+.possibleMove {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: rgb(24, 51, 126);
+    cursor: pointer;
+}
+
+.checkerA {
+    height: 55px;
+    width: 65px;
+    background-color: rgb(173, 6, 6);
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+
+}
+
+.checkerB {
+    height: 55px;
+    width: 65px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+}
+
+.checkerA.active {
+    cursor: pointer;
+}
+
+.checkerB.active {
+    cursor: pointer;
+}
+
+.turnLabel {
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Red {
+    color: red;
+}
+
+/* Control the left side */
+.left {
+    left: 0;
+}
+
+/* Control the right side */
+.right {
+    right: 0;
+    background-color: red;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.button {
+    background-color: rgb(24, 51, 126);
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 4px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
